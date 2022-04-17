@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="مرحبا بكم في تسبيح، هذا الموقع بسيط وفكرته هو تسهيل التسابيح حيث ستم ظهور تسبيحة بشكل عشوائي وكل ما عليكم هو الضغط على الزر الازرق لعد التسبيحة او الاخضر لتغير التسبيحة او الاحمر للعد من جديد">
+    <title>تسبيحــــة</title>
+    <link rel="icon" href="tasbeeh.ico" type="image/icon type">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;1,400;1,700&family=Qahiri&family=Vazirmatn:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tasbeeh.css">
+</head>
+<body>
+    <nav>تسبيحــــة
+            <p style="font-family: 'Amiri', serif; margin:20px 0 0; font-size: 15px">قال تعالى ﴿ يَا أَيُّهَا الَّذِينَ آمَنُوا اذْكُرُوا اللَّهَ ذِكْرًا كَثِيرًا ﴾ [الأحزاب: 41].</p>
+    </nav>
+    <div class='main'>
+        <!-- <button class="toDarkMode">Dark Mode</button>
+        <button class="toLightMode">Light Mode</button> -->
+        <div class="card">
+            <p><span id="tasbeha-name">الحمد لله</span></p>
+                
+        
+        <button id="btn" onclick="handleClick()">
+            <span id='counter'>0</span>
+            <span id="text" style="font-size: 16px">تسبيحة</span>
+            <p>
+                <!-- <span>عدد التسابيح: </span>
+                <span id="coun">0</span> -->
+            </p>
+        </button> 
+        
+        <button class="reset other" onclick="handleOther()">تسبيحة اخرى</button>
+        <button class="reset" onclick="handleReset()">اعادة العداد</button>  
+        </div>
+    </div>
+
+    <footer>بــرمجــة وتصميم محمـــد شــراقـــي</footer>
+
+    <script src="tasbeeh.js"></script>
+</body>
+</html>

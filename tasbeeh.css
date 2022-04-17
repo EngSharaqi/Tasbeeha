@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+    font-family: 'Vazirmatn', serif;
+}
+
+nav, footer{
+    box-shadow: 0px -2px 5px #a0a0a0;
+    text-align: center;
+    font-family: 'Qahiri', sans-serif;
+    font-size: 30px;
+    padding: 20px 10px;
+    color: #000fc3;
+
+    }
+
+footer{ box-shadow: 0px 2px 5px #a0a0a0; font-size: 18px }
+
+.main{
+    height: 100%;
+    margin: 20% auto;
+    width: 100%;
+    text-align: center;
+}
+
+.card {
+    min-width: 200px;
+    max-width: 80%;
+    background: #fff;
+    border-radius: 10px;
+    /* height: 100px; */
+    padding: 10px 5px 20px;
+    font-size: 16px;
+    margin: 0 auto;
+    direction: rtl;
+    box-shadow: 0px 0 2px #a0a0a0;
+}
+
+button > span, button p span {font-size: 12px; font-weight: normal !important; color: rgb(140, 140, 255)}
+
+
+p > span{font-weight: bold}
+#btn {
+    display: block;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 0;
+    margin: 20px auto;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 0 2px #cacaca;
+    background:#000fc3;
+    /* background: linear-gradient(45deg, #000fc3, #00ffad);
+    animation: Gradient 1s ease-in-out infinite; */
+    color: #fff
+}
+
+#btn:hover{ background: #000972 }
+
+span#counter{ font-size: 50px; font-weight: 900; display: block; color: #fff; margin-top: 20%}
+
+.reset{
+    color: #222;
+    border: 1px solid red;
+    background: #fff;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 110px
+    
+}
+
+.reset:hover{ background: red; color: #fff }
+
+.other{ border: 1px solid green }
+.other:hover{ background: green; color: #fff }
+
+#tasbeha-name{ color: #000fc3; font-size: 20px; line-height: 1.3}
+
+
+/* Dark mode */
+.darkMode{
+    background: #222222;
+    color: #fff;
+}
+
+@media (min-width: 600px){
+    .card{ max-width: 60%}
+}
+
+@media (min-width: 770px){
+    .card{ max-width: 50%}
+    .main {margin: 10% auto}
+}
+
+@media (min-width: 1000px){
+    .card{ max-width: 35%}
+}
