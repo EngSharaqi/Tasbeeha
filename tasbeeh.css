@@ -1,17 +1,37 @@
+:root {
+    --mainBG: #000d57;
+    --mainC: #fff
+}
 *{
     padding: 0;
     margin: 0;
     direction: rtl;
     font-family: 'Lateef', serif;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.background {
+    height: 100vh;
+    background-color: var(--mainBG);
+    z-index: -999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.backgroundChange {
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+    background-color: var(--mainBG);
 }
 
 nav, footer{
     box-shadow: 0px -2px 5px #a0a0a0;
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     padding: 20px 10px;
-    color: #000fc3;
-
+    color: #fff;
     }
 
 footer{
@@ -47,7 +67,6 @@ footer{
     background: #fff;
     border-radius: 10px;
     /* height: 100px; */
-    padding: 10px 5px 20px;
     font-size: 16px;
     margin: 0 auto;
     direction: rtl;
@@ -56,24 +75,67 @@ footer{
     max-width: 60%;
     backdrop-filter: blur(14px);
     border: 0;
+    overflow: hidden;
+    padding: 0 !important;
 }
 
+q, #type {
+    opacity: 0.9;
+    font-size: 20px;
+    display: inline-block;
+}
 button > span, button p span {font-size: 12px; font-weight: normal !important; color: rgb(140, 140, 255)}
 
+.bottomButtonsContainer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100% !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+}
 .bottomButtons {
-    position: fixed;
+    /* position: fixed;
     bottom: 0;
-    left: 0;
+    left: 0; */
+    display: inline-block !important;
     width: 50%;
-    z-index: 99;
     background-color: #fff;
     margin: 0 !important;
     border-radius: 0 !important;
+    color: #004e92;
+    border: 1px solid #ffffff52 !important;
+    background: #8cafce;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    font-weight: bold;
+    font-size: 18px;
+    border-right-color: transparent !important;
+    background-color: transparent !important;
+    border-bottom-color: transparent !important;
+    margin-top: 20px;
 }
+
 
 .rightButton {
     left: initial;
     right: 0;
+}
+
+.rightButton:hover {
+    background-color: #fff !important;
+    border: 1px solid #fff !important;
+    box-shadow: 0 0 28px 2px #e5e5e5 !important;}
+
+.leftButton {
+    border-left-color: transparent !important;
+    color: red;
+}
+
+.leftButton:hover {
+    background-color: red !important;
+    border: 1px solid red !important;
+    box-shadow: 0 0 28px 2px #e29898 !important;
 }
 
 p > span{font-weight: bold}
@@ -81,27 +143,40 @@ p > span{font-weight: bold}
     display: flex;
     width: 180px;
     height: 180px;
-    border-radius: 50%;
+    border-radius: 20px;
     border: 0;
     margin: 20px auto;
     font-size: 16px;
     cursor: pointer;
     box-shadow: 0px 0 2px #cacaca;
-    background: #000fc3;
-    color: #fff;
+    background-color: var(--mainBG);
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
     color: #222;
-    box-shadow: 0px 0px 10px -5px #aaa, 3px 3px 6px -7px #000 !important;
+    -webkit-transition: 0.2s all ease-in-out;
+    -moz-transition: 0.2s all ease-in-out;
+    -o-transition: 0.2s all ease-in-out;
+    -ms-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out
 }
 
 #btn span {
-    color: #222 !important;
+    color: #fff !important;
 }
 
-/* #btn:hover{ background: #000972 } */
+#btn:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -webkit-transition: 0.2s all ease-in-out;
+    -moz-transition: 0.2s all ease-in-out;
+    -o-transition: 0.2s all ease-in-out;
+    -ms-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out
+}
 
 button, .bottomButtons, .bottomButtons:hover, .bottomButtons:focus, .bottomButtons:visited, #btn, #btn:hover, #btn:focus, #btn:visited {
     outline: 0 !important;
@@ -112,7 +187,14 @@ button, .bottomButtons, .bottomButtons:hover, .bottomButtons:focus, .bottomButto
     -ms-box-shadow: none !important;
 }
 
-span#counter{ font-size: 50px; font-weight: 900; display: block; color: #fff; margin-top: 20%}
+span#counter {
+    font-size: 100px;
+    height: 100%;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .reset{
     color: #222;
@@ -132,14 +214,62 @@ span#counter{ font-size: 50px; font-weight: 900; display: block; color: #fff; ma
 .other{ border: 1px solid green }
 .other:hover{ background: green; color: #fff }
 
-#tasbeha-name{ color: #000fc3; font-size: 20px; line-height: 1.3}
-
-
-/* Dark mode */
-.darkMode{
-    background: #222222;
-    color: #fff;
+#tasbeha-name{
+    line-height: 1.3;
+    color: rgb(0, 78, 146);
+    font-size: 40px;
+    margin: 25px 0 0px;
+    display: block;
 }
+
+.main p {
+    padding: 0 10px;
+}
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 5px;
+    direction: rtl;
+  }
+  
+  .footer, .footer small, .footer .slogan {
+    direction: ltr !important;
+  
+  }
+  .footer img {
+    width: 150px;
+    display: block;
+    margin: 10px auto;
+  }
+  .footer .slogan {
+    margin-bottom: 20px;
+    color: #fff !important;
+  }
+  .footer h6 {
+    font-size: 25px;
+  }
+  .footer small {
+    display: block;
+    font-size: 18px;
+  }
+  
+  .footer a, .footer small {
+    font-size: 17px;
+    text-decoration: none;
+    color: initial;
+    color: #ffffff99;
+  }
+  
+  .footer a {
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .footer a:hover {
+    /* color: #885d00; */
+    font-weight: bold;
+    
+  }
 
 @media (min-width: 600px){
     .card{ max-width: 60%}
@@ -152,4 +282,11 @@ span#counter{ font-size: 50px; font-weight: 900; display: block; color: #fff; ma
 
 @media (min-width: 1000px){
     .card{ max-width: 35%}
+}
+
+@media (max-width: 767px) {
+    .card { max-width: 95%; }
+    #tasbeha-name {
+        font-size: 25px !important;
+    }
 }

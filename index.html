@@ -5,54 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="مرحبا بكم في تسبيح، هذا الموقع بسيط وفكرته هو تسهيل التسابيح حيث ستم ظهور تسبيحة بشكل عشوائي وكل ما عليكم هو الضغط على الزر الازرق لعد التسبيحة او الاخضر لتغير التسبيحة او الاحمر للعد من جديد">
+    <meta name="description"
+        content="مرحبا بكم في تسبيح، هذا الموقع بسيط وفكرته هو تسهيل التسابيح حيث ستم ظهور تسبيحة بشكل عشوائي وكل ما عليكم هو الضغط على الزر الازرق لعد التسبيحة او الاخضر لتغير التسبيحة او الاحمر للعد من جديد">
 
     <title>تسبيحــــة</title>
     <link rel="icon" href="tasbeeh.ico" type="image/icon type" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="tasbeeh.css">
 </head>
 
 <body>
-    <!-- <nav>تسبيحــــة
-        <p style="font-family: 'Amiri', serif; margin:20px 0 0; font-size: 15px">قال تعالى ﴿ يَا أَيُّهَا الَّذِينَ
-            آمَنُوا اذْكُرُوا اللَّهَ ذِكْرًا كَثِيرًا ﴾ [الأحزاب: 41].</p>
-    </nav> -->
-    <div class="blurBackground">
+    <nav>تسبيحــــة
+        <!-- <p style="font-family: 'Amiri', serif; margin:20px 0 0; font-size: 15px">  ﴿ يَا أَيُّهَا الَّذِينَ آمَنُوا اذْكُرُوا اللَّهَ ذِكْرًا كَثِيرًا ﴾ [الأحزاب: 41]</p> -->
+    </nav>
+    <!-- <div class="blurBackground">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" opacity="1"><defs><filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
             <feGaussianBlur stdDeviation="60" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur></filter></defs><g filter="url(#bbblurry-filter)"><ellipse rx="143.5" ry="137.5" cx="498.285121134523" cy="253.7092736841325" fill="hsl(37, 99%, 67%)"></ellipse><ellipse rx="143.5" ry="137.5" cx="496.49684623118264" cy="534.9886729753771" fill="hsl(316, 73%, 52%)"></ellipse><ellipse rx="143.5" ry="137.5" cx="269.25462821360463" cy="407.9124417329337" fill="hsl(185, 100%, 57%)"></ellipse></g></svg>
-    </div>
+    </div> -->
+    <div class="background" id="bg"></div>
     <div class='main'>
-        
-        <!-- <button class="toDarkMode">Dark Mode</button>
-        <button class="toLightMode">Light Mode</button> -->
         <div class="card">
             <p><span id="tasbeha-name">الحمد لله</span></p>
-            <p><small id="desc"></small></p>
-            <p><small id="type"></small></p>
+            <p>
+                <small>
+                    <q id="desc"></q> <small id="type"></small>
+                </small>
 
-            
+            </p>
+
+
             <button id="btn" onclick="handleClick()">
                 <span id='counter'>0</span>
-                <span id="text" style="font-size: 16px">تسبيحة</span>
-                <p>
-                    <!-- <span>عدد التسابيح: </span>
-                <span id="coun">0</span> -->
-                </p>
             </button>
+            <div class="bottomButtonsContainer">
+            </div>
 
-            
+            <div class="bottomButtonsContainer">
+                <button id='anotherTasbeeha' class="btn btn-outline-success other bottomButtons rightButton" onclick="handleOther()">تسبيحة
+                    اخرى</button>
+                <!-- <button class="bn632-hover btn btn-outline-danger bn19"  onclick="handleReset()">اعادة العداد</button> -->
+
+                <button class="btn btn-outline-danger bottomButtons leftButton" onclick="handleReset()">اعادة
+                    العداد</button>
+            </div>
         </div>
-        <button class="btn btn-outline-success other bottomButtons rightButton" onclick="handleOther()">تسبيحة اخرى</button>
-            <button class="btn btn-outline-danger bottomButtons leftButton" onclick="handleReset()">اعادة العداد</button>
     </div>
 
     <!-- <footer>بــرمجــة وتصميم محمـــد شــراقـــي</footer> -->
+    <footer class="footer">
+        <p>
+            <img src="tasbeeh.ico" alt='tarteel | ترتيل' />
+        </p>
+        <h6>Tasbeeha | تسبيحة</h6>
+        <small class="slogan">يَا أَيُّهَا الَّذِينَ آمَنُوا اذْكُرُوا اللَّهَ ذِكْرًا كَثِيرًا</small>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <small>#Created By <a href='https://linkedin.com/in/EngSharaqi' target='_blank' >Mohamed A. Sharaqi</a> <br /> 2023 all rights reseved</small>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <script src="tasbeeh.js"></script>
 </body>
 
