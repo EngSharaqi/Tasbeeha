@@ -2,21 +2,38 @@
     padding: 0;
     margin: 0;
     direction: rtl;
-    font-family: 'Vazirmatn', serif;
+    font-family: 'Lateef', serif;
 }
 
 nav, footer{
     box-shadow: 0px -2px 5px #a0a0a0;
     text-align: center;
-    font-family: 'Qahiri', sans-serif;
     font-size: 30px;
     padding: 20px 10px;
     color: #000fc3;
 
     }
 
-footer{ box-shadow: 0px 2px 5px #a0a0a0; font-size: 18px }
+footer{
+    box-shadow: 0px 2px 5px #a0a0a0;
+    font-size: 18px;
+    padding: 40px 0;
+    /* position: relative;
+    z-index: 9999999;
+    background-color: #fff; */
+}
 
+.blurBackground {
+    width: 80%;
+    height: 100vh;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden;
+    position: fixed;
+    z-index: -999;
+    top: 0;
+    right: 0
+}
 .main{
     height: 100%;
     margin: 20% auto;
@@ -34,15 +51,34 @@ footer{ box-shadow: 0px 2px 5px #a0a0a0; font-size: 18px }
     font-size: 16px;
     margin: 0 auto;
     direction: rtl;
-    box-shadow: 0px 0 2px #a0a0a0;
+    /* box-shadow: 0px 0 2px #a0a0a0; */
+    background-color: #ffffff8c;
+    max-width: 60%;
+    backdrop-filter: blur(14px);
+    border: 0;
 }
 
 button > span, button p span {font-size: 12px; font-weight: normal !important; color: rgb(140, 140, 255)}
 
+.bottomButtons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    z-index: 99;
+    background-color: #fff;
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+.rightButton {
+    left: initial;
+    right: 0;
+}
 
 p > span{font-weight: bold}
 #btn {
-    display: block;
+    display: flex;
     width: 180px;
     height: 180px;
     border-radius: 50%;
@@ -51,13 +87,30 @@ p > span{font-weight: bold}
     font-size: 16px;
     cursor: pointer;
     box-shadow: 0px 0 2px #cacaca;
-    background:#000fc3;
-    /* background: linear-gradient(45deg, #000fc3, #00ffad);
-    animation: Gradient 1s ease-in-out infinite; */
-    color: #fff
+    background: #000fc3;
+    color: #fff;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: #222;
+    box-shadow: 0px 0px 10px -5px #aaa, 3px 3px 6px -7px #000 !important;
 }
 
-#btn:hover{ background: #000972 }
+#btn span {
+    color: #222 !important;
+}
+
+/* #btn:hover{ background: #000972 } */
+
+button, .bottomButtons, .bottomButtons:hover, .bottomButtons:focus, .bottomButtons:visited, #btn, #btn:hover, #btn:focus, #btn:visited {
+    outline: 0 !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+}
 
 span#counter{ font-size: 50px; font-weight: 900; display: block; color: #fff; margin-top: 20%}
 
