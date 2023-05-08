@@ -281,6 +281,10 @@ span#counter {
 }
 
 @media (min-width: 1000px){
+    .card{ max-width: 50%}
+}
+
+@media (min-width: 1500px){
     .card{ max-width: 35%}
 }
 
@@ -288,5 +292,11 @@ span#counter {
     .card { max-width: 95%; }
     #tasbeha-name {
         font-size: 25px !important;
+    }
+    #btn:hover {
+        transform: scale(1);
+    }
+    .main {
+        margin: 40px auto;
     }
 }
