@@ -1,74 +1,288 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description"
-        content="مرحبا بكم في تسبيح، هذا الموقع بسيط وفكرته هو تسهيل التسابيح حيث ستم ظهور تسبيحة بشكل عشوائي وكل ما عليكم هو الضغط على الزر الازرق لعد التسبيحة او الاخضر لتغير التسبيحة او الاحمر للعد من جديد">
 
-    <title>تسبيحــــة</title>
-    <link rel="icon" href="tasbeeh.ico" type="image/icon type" />
+    <title>تسبيحة | مسبحة إلكترونية وأذكار الصباح والمساء وحصن المسلم</title>
+    <meta name="description"
+        content="تسبيحة مسبحة إلكترونية مجانية بعدّاد تسبيح، فيها أذكار الصباح والمساء وأذكار النوم والصلاة وأدعية حصن المسلم مع فضل كل ذكر وعدد تكراره. تعمل على الجوال والكمبيوتر بدون تسجيل.">
+    <meta name="keywords"
+        content="مسبحة إلكترونية, سبحة إلكترونية, عداد تسبيح, تسبيح, أذكار الصباح, أذكار المساء, أذكار الصباح والمساء, أذكار النوم, حصن المسلم, أدعية, أذكار بعد الصلاة, استغفار, Tasbeeh counter, Azkar">
+    <meta name="author" content="Mohamed A. Sharaqi">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="theme-color" content="#0b3d5c">
+    <meta name="color-scheme" content="light">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="https://tasbeeha.vercel.app/" />
+    <link rel="alternate" hreflang="ar" href="https://tasbeeha.vercel.app/" />
+    <link rel="alternate" hreflang="x-default" href="https://tasbeeha.vercel.app/" />
+
+    <!-- Icons & PWA -->
+    <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192" />
+    <link rel="icon" href="tasbeeh.ico" type="image/png" sizes="512x512" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="application-name" content="تسبيحة">
+    <meta name="apple-mobile-web-app-title" content="تسبيحة">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="تسبيحة">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:url" content="https://tasbeeha.vercel.app/">
+    <meta property="og:title" content="تسبيحة | مسبحة إلكترونية وأذكار الصباح والمساء">
+    <meta property="og:description"
+        content="مسبحة إلكترونية مجانية بعدّاد تسبيح، مع أذكار الصباح والمساء وأدعية حصن المسلم وفضل كل ذكر.">
+    <meta property="og:image" content="https://tasbeeha.vercel.app/og-image.png">
+    <meta property="og:image:secure_url" content="https://tasbeeha.vercel.app/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="تسبيحة - مسبحة إلكترونية وأذكار المسلم">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="تسبيحة | مسبحة إلكترونية وأذكار الصباح والمساء">
+    <meta name="twitter:description"
+        content="مسبحة إلكترونية مجانية بعدّاد تسبيح، مع أذكار الصباح والمساء وأدعية حصن المسلم وفضل كل ذكر.">
+    <meta name="twitter:image" content="https://tasbeeha.vercel.app/og-image.png">
+    <meta name="twitter:image:alt" content="تسبيحة - مسبحة إلكترونية وأذكار المسلم">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://tasbeeha.vercel.app/#website",
+                "url": "https://tasbeeha.vercel.app/",
+                "name": "تسبيحة",
+                "alternateName": ["Tasbeeha", "مسبحة إلكترونية"],
+                "description": "مسبحة إلكترونية وأذكار الصباح والمساء وأدعية حصن المسلم.",
+                "inLanguage": "ar",
+                "publisher": { "@id": "https://tasbeeha.vercel.app/#author" }
+            },
+            {
+                "@type": "WebApplication",
+                "@id": "https://tasbeeha.vercel.app/#app",
+                "name": "تسبيحة",
+                "alternateName": "Tasbeeha",
+                "url": "https://tasbeeha.vercel.app/",
+                "image": "https://tasbeeha.vercel.app/og-image.png",
+                "description": "مسبحة إلكترونية مجانية بعدّاد تسبيح، فيها أذكار الصباح والمساء وأذكار النوم والصلاة وأدعية حصن المسلم مع فضل كل ذكر وعدد تكراره.",
+                "applicationCategory": "LifestyleApplication",
+                "operatingSystem": "Any",
+                "browserRequirements": "Requires JavaScript",
+                "inLanguage": "ar",
+                "isAccessibleForFree": true,
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                "featureList": [
+                    "عداد تسبيح إلكتروني",
+                    "أذكار الصباح",
+                    "أذكار المساء",
+                    "أذكار النوم والاستيقاظ",
+                    "أذكار الصلاة والوضوء",
+                    "أدعية حصن المسلم",
+                    "مشاركة صورة إتمام الذكر"
+                ],
+                "author": { "@id": "https://tasbeeha.vercel.app/#author" },
+                "isPartOf": { "@id": "https://tasbeeha.vercel.app/#website" }
+            },
+            {
+                "@type": "Person",
+                "@id": "https://tasbeeha.vercel.app/#author",
+                "name": "Mohamed A. Sharaqi",
+                "url": "https://linkedin.com/in/EngSharaqi",
+                "sameAs": ["https://linkedin.com/in/EngSharaqi", "https://github.com/EngSharaqi"]
+            }
+        ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap"
         rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link rel="stylesheet" href="tasbeeh.css">
 </head>
 
 <body>
-    <nav>تسبيحــــة
-        <!-- <p style="font-family: 'Amiri', serif; margin:20px 0 0; font-size: 15px">  ﴿ يَا أَيُّهَا الَّذِينَ آمَنُوا اذْكُرُوا اللَّهَ ذِكْرًا كَثِيرًا ﴾ [الأحزاب: 41]</p> -->
-    </nav>
-    <!-- <div class="blurBackground">
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" opacity="1"><defs><filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feGaussianBlur stdDeviation="60" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur></filter></defs><g filter="url(#bbblurry-filter)"><ellipse rx="143.5" ry="137.5" cx="498.285121134523" cy="253.7092736841325" fill="hsl(37, 99%, 67%)"></ellipse><ellipse rx="143.5" ry="137.5" cx="496.49684623118264" cy="534.9886729753771" fill="hsl(316, 73%, 52%)"></ellipse><ellipse rx="143.5" ry="137.5" cx="269.25462821360463" cy="407.9124417329337" fill="hsl(185, 100%, 57%)"></ellipse></g></svg>
-    </div> -->
-    <div class="background" id="bg"></div>
-    <div class='main'>
-        <div class="card">
-            <p><span id="tasbeha-name">الحمد لله</span></p>
-            <p>
-                <small>
-                    <q id="desc"></q> <small id="type"></small>
-                </small>
+    <div class="backdrop" aria-hidden="true"></div>
 
+    <header class="topbar">
+        <a class="brand" href="./">
+            <span class="brand-logo"><img src="tasbeeh.ico" alt="" width="28" height="28" /></span>
+            <span>تسبيحة</span>
+        </a>
+        <button type="button" class="topbar-btn" id="openLibrary" aria-haspopup="dialog">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01" />
+            </svg>
+            الأذكار
+        </button>
+    </header>
+
+    <main class="main">
+        <h1 class="sr-only">تسبيحة: مسبحة إلكترونية وأذكار الصباح والمساء وحصن المسلم</h1>
+
+        <noscript>
+            <p class="noscript">
+                تسبيحة مسبحة إلكترونية فيها عدّاد تسبيح وأذكار الصباح والمساء وأدعية حصن المسلم.
+                يرجى تفعيل JavaScript في المتصفح لاستخدام العدّاد وعرض الأذكار.
             </p>
+        </noscript>
 
-
-            <button id="btn" onclick="handleClick()">
-                <span id='counter'>0</span>
+        <article class="card" id="card">
+            <button type="button" class="badge" id="typeBtn" aria-haspopup="dialog" title="اختر نوع الأذكار">
+                <span id="type">أذكار الصباح</span>
+                <svg class="badge-chevron" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
             </button>
-            <div class="bottomButtonsContainer">
+
+            <div class="meta" id="meta">
+                <button type="button" class="meta-step" id="prevZekr" aria-label="الذكر السابق">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M9 6l6 6-6 6" />
+                    </svg>
+                </button>
+                <span class="meta-label">
+                    <svg class="meta-shuffle" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" />
+                    </svg>
+                    <span id="position"></span>
+                </span>
+                <button type="button" class="meta-step" id="nextZekr" aria-label="الذكر التالي">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M15 6l-6 6 6 6" />
+                    </svg>
+                </button>
             </div>
 
-            <div class="bottomButtonsContainer">
-                <button id='anotherTasbeeha' class="btn btn-outline-success other bottomButtons rightButton" onclick="handleOther()">تسبيحة
-                    اخرى</button>
-                <!-- <button class="bn632-hover btn btn-outline-danger bn19"  onclick="handleReset()">اعادة العداد</button> -->
+            <p class="zekr" id="tasbeha-name">الحمد لله</p>
+            <p class="bless" id="desc" hidden></p>
 
-                <button class="btn btn-outline-danger bottomButtons leftButton" onclick="handleReset()">اعادة
-                    العداد</button>
+            <button type="button" class="counter" id="btn">
+                <svg class="ring" viewBox="0 0 120 120" aria-hidden="true">
+                    <circle class="ring-track" cx="60" cy="60" r="56" />
+                    <circle class="ring-progress" id="ring" cx="60" cy="60" r="56" pathLength="100" />
+                </svg>
+                <span class="counter-value" id="counter">0</span>
+                <span class="counter-target" id="target"></span>
+            </button>
+
+            <div class="actions">
+                <button type="button" class="action action-primary" id="anotherTasbeeha">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 12a9 9 0 1 1-2.64-6.36M21 4v5h-5" />
+                    </svg>
+                    تسبيحة أخرى
+                </button>
+                <button type="button" class="action action-ghost" id="reset">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 12a9 9 0 1 0 2.64-6.36M3 4v5h5" />
+                    </svg>
+                    إعادة العداد
+                </button>
+            </div>
+        </article>
+
+        <p class="hint">اضغط على العداد أو زر <kbd>مسافة</kbd> للتسبيح</p>
+    </main>
+
+    <dialog class="celebrate" id="celebrate" aria-labelledby="celebrateTitle">
+        <canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+        <div class="celebrate-panel">
+            <button type="button" class="icon-btn celebrate-close" id="celebrateClose" aria-label="إغلاق">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6L6 18" />
+                </svg>
+            </button>
+            <span class="celebrate-seal" aria-hidden="true">✦</span>
+            <h2 class="celebrate-title" id="celebrateTitle">ما شاء الله، أتممت الذكر</h2>
+            <p class="celebrate-text" id="celebrateText"></p>
+
+            <div class="celebrate-share" id="celebrateShare">
+                <div class="share-preview is-loading" id="sharePreview">
+                    <img id="shareImage" alt="صورة إتمام الذكر" hidden />
+                </div>
+                <div class="actions" id="celebrateActions">
+                    <button type="button" class="action action-primary" id="shareImageBtn" disabled>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 3v12M7 8l5-5 5 5M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5" />
+                        </svg>
+                        مشاركة
+                    </button>
+                    <button type="button" class="action action-outline" id="saveImageBtn" disabled>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 3v12M7 10l5 5 5-5M5 19h14" />
+                        </svg>
+                        حفظ الصورة
+                    </button>
+                </div>
+            </div>
+
+            <button type="button" class="celebrate-next" id="celebrateNext">تسبيحة أخرى ←</button>
+        </div>
+    </dialog>
+
+    <dialog class="sheet" id="library" aria-labelledby="libraryTitle">
+        <div class="sheet-panel">
+            <header class="sheet-head">
+                <h2 class="sheet-title" id="libraryTitle">الأذكار</h2>
+                <button type="button" class="icon-btn" id="libraryClose" aria-label="إغلاق">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 6l12 12M18 6L6 18" />
+                    </svg>
+                </button>
+            </header>
+
+            <label class="search">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7" />
+                    <path d="M20 20l-3.5-3.5" />
+                </svg>
+                <input type="search" id="librarySearch" placeholder="ابحث عن ذكر أو نوع…" aria-label="بحث في الأذكار"
+                    autocomplete="off" />
+            </label>
+
+            <div class="sheet-body" id="libraryBody">
+                <section id="quickSection">
+                    <h3 class="sheet-label">نوع التسبيح</h3>
+                    <div class="chips" id="quickChips"></div>
+                </section>
+
+                <section>
+                    <h3 class="sheet-label">كل الأذكار</h3>
+                    <div id="libraryList"></div>
+                    <p class="empty" id="libraryEmpty" hidden>لا توجد نتائج مطابقة</p>
+                </section>
             </div>
         </div>
-    </div>
+    </dialog>
 
-    <!-- <footer>بــرمجــة وتصميم محمـــد شــراقـــي</footer> -->
     <footer class="footer">
-        <p>
-            <img src="tasbeeh.ico" alt='tarteel | ترتيل' />
-        </p>
-        <h6>Tasbeeha | تسبيحة</h6>
-        <small class="slogan">يَا أَيُّهَا الَّذِينَ آمَنُوا اذْكُرُوا اللَّهَ ذِكْرًا كَثِيرًا</small>
-
-        <small>#Created By <a href='https://linkedin.com/in/EngSharaqi' target='_blank' >Mohamed A. Sharaqi</a> <br /> 2023 all rights reseved</small>
+        <nav class="footer-links" aria-label="الأذكار مكتوبة">
+            <a href="/azkar/azkar_alsabah">أذكار الصباح</a>
+            <a href="/azkar/azkar_almasaa">أذكار المساء</a>
+            <a href="/azkar/hisn_2">أذكار النوم</a>
+            <a href="/azkar">كل الأذكار مكتوبة</a>
+        </nav>
+        <p class="slogan">﴿ يَا أَيُّهَا الَّذِينَ آمَنُوا اذْكُرُوا اللَّهَ ذِكْرًا كَثِيرًا ﴾</p>
+        <small>
+            Tasbeeha · Created by
+            <a href="https://linkedin.com/in/EngSharaqi" target="_blank" rel="noopener">Mohamed A. Sharaqi</a>
+            · © 2023–<span id="year">2023</span>
+        </small>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+
+    <script src="azkar.js"></script>
     <script src="tasbeeh.js"></script>
 </body>
 
